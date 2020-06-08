@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "xxx-wp-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/xxxWp/XxxWpWebPart.js",
+          "manifest": "./src/webparts/xxxWp/XxxWpWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    "jquery": {
+      "path": "node_modules/jquery/dist/jquery.min.js",
+      "globalName": "jQuery"
+    },
+    "bootstrap": {
+      "path": "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "globalName": "bootstrap",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "datatable": {
+      "path": "node_modules/datatables.net/js/jquery.dataTables.js",
+      "globalName": "datatable",
+      "globalDependencies": [
+        "jquery"
+      ]
+    },
+    "datatableb4": {
+      "path": "node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js",
+      "globalName": "datatableb4",
+      "globalDependencies": [
+        "jquery"
+      ]
+    }
+  }
+,
+  "localizedResources": {
+    "XxxWpWebPartStrings": "lib/webparts/xxxWp/loc/{locale}.js"
+  }
+}
